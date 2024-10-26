@@ -1,0 +1,414 @@
+/***
+    The new CSS reset - version 1.11.3 (last updated 25.08.2024)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/*
+    Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property
+    - The "symbol *" part is to solve Firefox SVG sprite bug
+    - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
+ */
+*:where(
+    :not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)
+  ) {
+  all: unset;
+  display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Fix mobile Safari increase font-size on landscape mode */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Reapply the pointer cursor for anchor tags */
+a,
+button {
+  cursor: revert;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu,
+summary {
+  list-style: none;
+}
+
+/* Firefox: solve issue where nested ordered lists continue numbering from parent (https://bugzilla.mozilla.org/show_bug.cgi?id=1881517) */
+ol {
+  counter-reset: revert;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
+input,
+textarea {
+  -webkit-user-select: auto;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* minimum style to allow to style meter element */
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+/* preformatted text - use only for this feature */
+:where(pre) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* reset default text opacity of input placeholder */
+::placeholder {
+  color: unset;
+}
+
+/* fix the feature of 'hidden' attribute.
+  display:revert; revert to element instead of attribute */
+:where([hidden]) {
+  display: none;
+}
+
+/* revert for bug in Chromium browsers
+  - fix for the content editable attribute will work properly.
+  - webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+:where([contenteditable]:not([contenteditable="false"])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+/* apply back the draggable feature - exist only in Chromium and Safari */
+:where([draggable="true"]) {
+  -webkit-user-drag: element;
+}
+
+/* Revert Modal native behavior */
+:where(dialog:modal) {
+  all: revert;
+  box-sizing: border-box;
+}
+
+/* Remove details summary webkit styles */
+::-webkit-details-marker {
+  display: none;
+}
+
+:root {
+  --background-site: #373257;
+  --white: #d5d5d5;
+  --gray: #aaaaaa;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--background-site);
+}
+
+/* HEADER*/
+.site-nav {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logoSymbolText menu-toggler";
+  padding: 0.25em;
+  align-items: center;
+}
+
+.logo-symbol {
+  width: 2em;
+  grid-area: logoSymbolText;
+}
+
+.logo-text {
+  grid-area: logoSymbolText;
+  margin-inline-start: 2.25em;
+  color: var(--white);
+}
+
+.site-main-menu {
+  position: fixed;
+  right: 0;
+  box-shadow: -1px 0px 3px 0px rgba(0, 0, 0, 0.75);
+  background: var(--background-site);
+  height: 100%;
+  perspective: 1000px;
+  padding-top: 80px;
+  padding-inline: 1em;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translateX(100%);
+  transition: transform 0.6s, visibility 0.6s;
+  visibility: hidden;
+  width: 75vw;
+  color: var(--white);
+}
+
+.menu-item {
+  padding: 1em;
+}
+
+.menu-visible .site-main-menu {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+.menu-toggler {
+  width: 50px;
+  height: 50px;
+  margin: 0 0 0 auto;
+  border-radius: 50%;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+  grid-area: menu-toggler;
+}
+
+.bar {
+  width: 40px;
+  height: 5px;
+  border: 2px solid var(--white);
+  position: absolute;
+  border-radius: 10px;
+  display: block;
+}
+.top {
+  left: 10%;
+  top: 20%;
+  transition: all 0.5s;
+}
+
+.middle {
+  left: 10%;
+  top: 40%;
+  transition: all 0.5s;
+}
+
+.bottom {
+  left: 10%;
+  top: 60%;
+  transition: all 0.5s;
+}
+
+.middle-open {
+  width: 30px;
+  height: 30px;
+  top: 16%;
+  left: 20%;
+  border-radius: 50%;
+  background: var(--background-site);
+  opacity: 0.15;
+}
+
+.top-open {
+  transform: rotate(45deg);
+  top: 40%;
+  border-radius: 10px;
+  background-color: var(--background-site);
+}
+
+.bottom-open {
+  transform: rotate(-45deg);
+  top: 40%;
+  border-radius: 10px;
+  background-color: var(--background-site);
+}
+
+/* HOME */
+
+main {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper-home {
+  display: grid;
+  grid-template-areas:
+    "home-photo"
+    "home-text";
+  gap: 2em;
+  justify-items: center;
+}
+
+.home-photo {
+  grid-area: home-photo;
+  border: 1em solid var(--gray);
+  border-radius: 50%;
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 25px 0 #000000cc;
+}
+
+.home-photo .image {
+  height: auto;
+  display: block;
+  border-radius: 50%;
+  margin: 0 auto;
+  top: -18px;
+  bottom: -18px;
+  width: auto;
+  left: -18px;
+  right: -18px;
+  border: 0.2px solid #000000cc;
+}
+
+.home-text {
+  grid-area: home-text;
+  display: grid;
+  color: var(--white);
+  gap: 0.5em;
+  justify-items: center;
+}
+
+.home-text h1 {
+  font-weight: 600;
+  font-size: 36px;
+}
+
+.home-text h4 {
+  font-weight: 400;
+  color: var(--gray);
+  font-size: 14px;
+}
+
+.home-intro {
+  max-width: 700px;
+  margin-bottom: 0.5em;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 2px solid transparent;
+  padding: 0.8em 2.1em;
+  margin-bottom: 0.75em;
+  margin-right: 0.25em;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 30px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  background-color: var(--background-site);
+}
+
+.btn-primary {
+  color: var(--white);
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #007bff;
+  border-color: #7066ff;
+}
+
+.btn-secondary {
+  color: var(--white);
+  border-color: #545b62;
+}
+
+.btn-secondary:hover {
+  background-color: #545b62;
+  border-color: #4e555b;
+}
+
+.section-title h2 {
+  display: inline-block;
+  position: relative;
+  font-size: 21px;
+  margin: 0 0 30px;
+  z-index: 1;
+  padding-bottom: 7px;
+  color: var(--white);
+}
+
+.section-title h2::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  background-color: #353535;
+  height: 2px;
+  bottom: 0;
+}
+
+.section-title h2::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 30px;
+  background-color: #007ced;
+  height: 2px;
+  bottom: 0;
+}
+
+/* FOOTER */
+
+.site-footer {
+  display: grid;
+  grid-template-areas:
+    "footer-socials"
+    "footer-copyright";
+  justify-content: center;
+  color: var(--white);
+  gap: 0.75em;
+  padding: 1em;
+  margin: 60px 0 0;
+  border-top: 1px solid #f2f2f2;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.footer-menu {
+  display: flex;
+  gap: 1.5em;
+}
+
+.footer-menu-item {
+  color: var(--gray);
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.footer-menu-item:hover {
+  color: var(--white);
+}
+
+.footer-copyright {
+  text-align: center;
+  font-size: 14px;
+}
