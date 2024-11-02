@@ -120,6 +120,13 @@ meter {
   display: none;
 }
 
+/* BASIC STYLES */
+
+/* SMALLER SMARTPHONES 0-480 */
+
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.cdnfonts.com/css/garet");
+
 :root {
   --background-site: #e3dbcc;
   --white: #f2ffff;
@@ -133,6 +140,34 @@ meter {
 body {
   min-height: 100vh;
   background-color: var(--background-site);
+  font-family: "Garet", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Public Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+h3,
+h4 {
+  font-family: "Garet", sans-serif;
+  margin: 0 0 5px;
+}
+
+.container article {
+  margin: 0 0 30px;
+}
+
+.container {
+  margin: 0 0 30px;
 }
 
 /* HEADER*/
@@ -259,7 +294,7 @@ main {
   margin: 0 auto;
 }
 
-.wrapper-home {
+.home {
   display: grid;
   grid-template-areas:
     "home-photo"
@@ -301,16 +336,13 @@ main {
 }
 
 .home-text h1 {
-  font-weight: 600;
   font-size: 36px;
   color: var(--black);
 }
 
 .home-text h4 {
-  font-weight: 400;
   color: var(--gray);
   font-size: 14px;
-  font-weight: 700;
 }
 
 .home-intro {
@@ -319,9 +351,13 @@ main {
   color: var(--black);
 }
 
+.home-buttons {
+  display: grid;
+  justify-content: center;
+}
+
 .btn {
   display: inline-block;
-  font-weight: 400;
   text-align: center;
   white-space: nowrap;
   vertical-align: middle;
@@ -430,3 +466,11 @@ main {
   text-align: center;
   font-size: 14px;
 }
+
+/* MEDIA QUERIES */
+
+/* TABLETS  & LARGER SMARTPHONES 481-768*/
+
+/* LAPTOPS, LARGER TABLETS IN LANDSCAPE, AND SMALL DESKTOPS */
+
+/* LARGER DESKTOPS AND MONITORS */
