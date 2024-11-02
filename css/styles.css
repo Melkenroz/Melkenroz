@@ -121,9 +121,13 @@ meter {
 }
 
 :root {
-  --background-site: #373257;
-  --white: #d5d5d5;
-  --gray: #aaaaaa;
+  --background-site: #e3dbcc;
+  --white: #f2ffff;
+  --gray: #545b62;
+  --graytransp: #545b62cc;
+  --black: #000000;
+  --brown: #745237;
+  --brown-transp: #745237cc;
 }
 
 body {
@@ -156,7 +160,7 @@ body {
 
 .logo-text {
   margin-inline-start: 0.25em;
-  color: var(--white);
+  color: var(--black);
 }
 
 .site-main-menu {
@@ -175,7 +179,7 @@ body {
   transition: transform 0.6s, visibility 0.6s;
   visibility: hidden;
   width: 75vw;
-  color: var(--white);
+  color: var(--black);
 }
 
 .menu-item {
@@ -200,7 +204,8 @@ body {
 .bar {
   width: 40px;
   height: 5px;
-  border: 2px solid var(--white);
+  border: 0.01em solid var(--brown);
+  color: var(--white);
   position: absolute;
   border-radius: 10px;
   display: block;
@@ -265,13 +270,13 @@ main {
 
 .home-photo {
   grid-area: home-photo;
-  border: 1em solid var(--gray);
+  border: 1em solid var(--background-site);
   border-radius: 50%;
   width: 100%;
   max-width: 600px;
   height: 100%;
   overflow: hidden;
-  box-shadow: 0 0 25px 0 #000000cc;
+  box-shadow: 0 0 25px 0 var(--brown-transp);
 }
 
 .home-photo .image {
@@ -284,7 +289,7 @@ main {
   width: auto;
   left: -18px;
   right: -18px;
-  border: 0.2px solid #000000cc;
+  border: 0.2px solid var(--brown-transp);
 }
 
 .home-text {
@@ -298,17 +303,20 @@ main {
 .home-text h1 {
   font-weight: 600;
   font-size: 36px;
+  color: var(--black);
 }
 
 .home-text h4 {
   font-weight: 400;
   color: var(--gray);
   font-size: 14px;
+  font-weight: 700;
 }
 
 .home-intro {
   max-width: 700px;
   margin-bottom: 0.5em;
+  color: var(--black);
 }
 
 .btn {
@@ -334,23 +342,23 @@ main {
 }
 
 .btn-primary {
-  color: var(--white);
-  border-color: #007bff;
+  color: var(--black);
+  border-color: var(--brown-transp);
 }
 
 .btn-primary:hover {
-  background-color: #007bff;
-  border-color: #7066ff;
+  background-color: var(--brown-transp);
+  color: var(--white);
 }
 
 .btn-secondary {
-  color: var(--white);
-  border-color: #545b62;
+  color: var(--black);
+  border-color: var(--gray);
 }
 
 .btn-secondary:hover {
-  background-color: #545b62;
-  border-color: #4e555b;
+  color: var(--white);
+  background-color: var(--graytransp);
 }
 
 .section-title h2 {
@@ -360,7 +368,7 @@ main {
   margin: 0 0 30px;
   z-index: 1;
   padding-bottom: 7px;
-  color: var(--white);
+  color: var(--black);
 }
 
 .section-title h2::before {
@@ -368,8 +376,10 @@ main {
   position: absolute;
   content: "";
   width: 100%;
-  background-color: #353535;
-  height: 2px;
+  background-color: var(--white);
+  border: 0.01em solid var(--black);
+  border-radius: 30px;
+  height: 3px;
   bottom: 0;
 }
 
@@ -378,8 +388,9 @@ main {
   position: absolute;
   content: "";
   width: 30px;
-  background-color: #007ced;
-  height: 2px;
+  background-color: var(--brown-transp);
+  border-radius: 30px;
+  height: 3px;
   bottom: 0;
 }
 
@@ -391,11 +402,11 @@ main {
     "footer-socials"
     "footer-copyright";
   justify-content: center;
-  color: var(--white);
+  color: var(--black);
   gap: 0.75em;
   padding: 1em;
   margin: 60px 0 0;
-  border-top: 1px solid #f2f2f2;
+  border-top: 1px solid var(--white);
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
 }
