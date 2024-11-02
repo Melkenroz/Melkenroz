@@ -141,14 +141,21 @@ body {
   align-items: center;
 }
 
-.logo-symbol {
-  width: 2em;
+.logoSymbolText {
   grid-area: logoSymbolText;
 }
 
+.logoSymbolText div {
+  display: flex;
+  align-items: center;
+}
+
+.logo-symbol {
+  width: 2em;
+}
+
 .logo-text {
-  grid-area: logoSymbolText;
-  margin-inline-start: 2.25em;
+  margin-inline-start: 0.25em;
   color: var(--white);
 }
 
