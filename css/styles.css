@@ -278,6 +278,7 @@ h4 {
   top: 16%;
   left: 20%;
   border-radius: 50%;
+  border-color: var(--brown-transp);
   background: var(--background-site);
   opacity: 0.15;
 }
@@ -286,14 +287,14 @@ h4 {
   transform: rotate(45deg);
   top: 40%;
   border-radius: 10px;
-  background-color: var(--background-site);
+  /* background-color: var(--background-site); */
 }
 
 .bottom-open {
   transform: rotate(-45deg);
   top: 40%;
   border-radius: 10px;
-  background-color: var(--background-site);
+  /* background-color: var(--background-site); */
 }
 
 /* HOME */
