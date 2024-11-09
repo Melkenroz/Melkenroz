@@ -46,7 +46,7 @@ function scrollToTop() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Fetch de JSON data
+  // Fetch the JSON data
   fetch("js/data.json")
     .then((response) => {
       if (!response.ok) {
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return response.json();
     })
     .then((data) => {
-      // Roep de functie aan om de data te tonen
+      // Call function to display data
       displayProfile(data.profiel);
     })
     .catch((error) => {
@@ -69,6 +69,7 @@ function displayProfile(profiel) {
   displayProject(profiel.project);
 }
 
+// display personalia
 function displayPersonalia(personalia) {
   const personaliaSection = document.createElement("section");
   personaliaSection.innerHTML = `  
@@ -101,6 +102,7 @@ function displayPersonalia(personalia) {
   app.appendChild(personaliaSection);
 }
 
+// Display expertise
 function displayExpertise(expertise) {
   const expertiseSection = document.createElement("section");
   expertiseSection.innerHTML = `
@@ -117,6 +119,7 @@ function displayExpertise(expertise) {
   app.appendChild(expertiseSection);
 }
 
+// Display Projects
 function displayProject(project) {
   const projectSection = document.createElement("section");
   projectSection.innerHTML = `
