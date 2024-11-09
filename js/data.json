@@ -1,0 +1,220 @@
+{
+  "profiel": {
+    "personalia": {
+      "naam": "Melvin Rozenblad",
+      "functie": "Ontwikkelaar",
+      "tekst": "Ik ben Melvin Rozenblad, een gepassioneerde en gemotiveerde ontwikkelaar met ervaring in web en softwareontwikkeling. Momenteel zoek ik naar een stimulerende positie waar ik mijn kennis en vaardigheden verder kan ontwikkelen en in de praktijk kan brengen.",
+      "afbeelding": "home-photo.jpg",
+      "cv": "Resume-public.pdf",
+      "contact": {
+        "email": "info@melvinrozenblad.nl",
+        "gitHub": "https://github.com/melkenroz",
+        "linkedIn": "https://www.linkedin.com/in/melvin-rozenblad-73a197303/",
+        "instagram": "https://www.instagram.com/melkenroz"
+      }
+    },
+    "expertise": [
+      {
+        "naam": "Web-ontwikkeling",
+        "tekst": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum veniam, dicta molestias ipsam vero, nisi eaque minima neque reiciendis, voluptas enim distinctio sint animi voluptatem deserunt impedit earum cumque. Sit."
+      },
+      {
+        "naam": "Applicatie-ontwikkeling",
+        "tekst": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum veniam, dicta molestias ipsam vero, nisi eaque minima neque reiciendis, voluptas enim distinctio sint animi voluptatem deserunt impedit earum cumque. Sit."
+      }
+    ],
+    "opleiding": [
+      {
+        "naam": "Manager / Ondernemer",
+        "organisatie": "ROC Amsterdam",
+        "periode": "1997-2000",
+        "adres": {
+          "straat-huisnummer": "Mr. Treublaan 1-3",
+          "postcode": "1097 DP",
+          "plaats": "Amsterdam",
+          "land": "Nederland"
+        }
+      },
+      {
+        "naam": "Bedrijfskundig Informatica",
+        "organisatie": "Hogeschool in Holland",
+        "periode": "2001-2004",
+        "adres": {
+          "straat-huisnummer": "Wildenborch 6",
+          "postcode": "1112 XB",
+          "plaats": "Diemen",
+          "land": "Nederland"
+        }
+      }
+    ],
+    "cursus": [
+      {
+        "naam": "Front-End Developer",
+        "organisatie": "College of Multimedia",
+        "periode": "Mar 2023 - Apr 2024",
+        "adres": {
+          "straat-huisnummer": "Egelenburg 150",
+          "postcode": "1081 GK",
+          "plaats": "Amsterdam",
+          "soort": "locatie"
+        }
+      },
+      {
+        "naam": "Back-End Developer",
+        "organisatie": "Share Network",
+        "periode": "Sep 2024 - heden",
+        "adres": {
+          "straat-huisnummer": "Parnassusweg 126",
+          "postcode": "1076 AT",
+          "plaats": "Amsterdam",
+          "soort": "locatie"
+        }
+      },
+      {
+        "naam": "The Git & Github Bootcamp",
+        "organisatie": "Udemy",
+        "periode": "2024",
+        "adres": {
+          "straat-huisnummer": "",
+          "postcode": "",
+          "plaats": "Internet",
+          "soort": "Online"
+        }
+      },
+      {
+        "naam": "The Web Developer Bootcamp 2024",
+        "organisatie": "Udemy",
+        "periode": "2024",
+        "adres": {
+          "straat-huisnummer": "",
+          "postcode": "",
+          "plaats": "Internet",
+          "soort": "Online"
+        }
+      },
+      {
+        "naam": "The Complete JavaScript Course 2024: From Zero to Expert!",
+        "organisatie": "Udemy",
+        "periode": "2024-heden",
+        "adres": {
+          "straat-huisnummer": "",
+          "postcode": "",
+          "plaats": "Internet",
+          "soort": "Online"
+        }
+      }
+    ],
+    "vaardigheden": [
+      {
+        "naam": "JavaScript",
+        "niveau": "Gemiddeld",
+        "soort": "Programmeertaal"
+      },
+      {
+        "naam": "Java",
+        "niveau": "Beginner",
+        "soort": "Programmeertaal"
+      },
+      {
+        "naam": "C#",
+        "niveau": "Gemiddeld",
+        "soort": "Programmeertaal"
+      },
+      {
+        "naam": "HTML",
+        "niveau": "Expert",
+        "soort": "Programmeertaal"
+      },
+      {
+        "naam": "CSS",
+        "niveau": "Gevorderd",
+        "soort": "Programmeertaal"
+      },
+      {
+        "naam": "Projectmanagement",
+        "niveau": "Gemiddeld",
+        "soort": "Management"
+      },
+      {
+        "naam": "Wordpress",
+        "niveau": "Gemiddeld",
+        "soort": "Programmeertaal"
+      },
+      {
+        "naam": "Nederlands",
+        "niveau": "Expert",
+        "soort": "Taal"
+      },
+      {
+        "naam": "Engels",
+        "niveau": "Gevorderd",
+        "soort": "Taal"
+      }
+    ],
+    "werkervaring": [
+      {
+        "functie": "Junior Developer",
+        "organisatie": "Unisys",
+        "periode": "2002-2004",
+        "tekst": "Ondersteuning van het ontwikkelteam bij het bouwen van desktopapplicaties en het oplossen van bugs."
+      },
+      {
+        "functie": "Medior Tester",
+        "organisatie": "Diginext (Multinext)",
+        "periode": "2006-2007",
+        "tekst": "Vinden van bugs in Connection manager"
+      },
+      {
+        "functie": "Junior Developer",
+        "organisatie": "LJL SOFT",
+        "periode": "2008-2009",
+        "tekst": "In detachering dienstverband ontwerpen, bouwen en testen van informatie systemen van derden (Rabo bank, Mitsubishi)"
+      },
+      {
+        "functie": "Medior Developer",
+        "organisatie": "Conservatrix",
+        "periode": "2009-2012",
+        "tekst": "In ontwikkelteam ontwerpen, ontwikkelen en testen van de kernsystemen."
+      },
+      {
+        "functie": "Medior Developer",
+        "organisatie": "Stichting Blocknotes",
+        "periode": "2019-heden",
+        "tekst": "Ontwerpen, ontwikkelen en onderhouden van de website van Stichting Blocknotes."
+      },
+      {
+        "functie": "Medior Developer",
+        "organisatie": "Stichting Samen Wonen Samen Leven",
+        "periode": "2023-heden",
+        "tekst": "Het vernieuwen en onderhouden van de website van Samen Wonen Samen Leven, evenals het beheer van de locatiesites Ru Paré en Station Wildeman."
+      }
+    ],
+    "project": [
+      {
+        "naam": "Project #1",
+        "tekst": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum veniam, dicta molestias ipsam vero, nisi eaque minima neque reiciendis, voluptas enim distinctio sint animi voluptatem deserunt impedit earum cumque. Sit."
+      },
+      {
+        "naam": "Project #2",
+        "tekst": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum veniam, dicta molestias ipsam vero, nisi eaque minima neque reiciendis, voluptas enim distinctio sint animi voluptatem deserunt impedit earum cumque. Sit."
+      },
+      {
+        "naam": "Project #3",
+        "tekst": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum veniam, dicta molestias ipsam vero, nisi eaque minima neque reiciendis, voluptas enim distinctio sint animi voluptatem deserunt impedit earum cumque. Sit."
+      },
+      {
+        "naam": "Project #4",
+        "tekst": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum veniam, dicta molestias ipsam vero, nisi eaque minima neque reiciendis, voluptas enim distinctio sint animi voluptatem deserunt impedit earum cumque. Sit."
+      }
+    ],
+    "referentie": [
+      {
+        "naam": "Hans Krikke",
+        "functie": "Directeur",
+        "organisatie": "Samen Wonen Samen Leven",
+        "mobiel": "+31 6 20879278",
+        "email": "h.krikke@sw-sl.nl"
+      }
+    ]
+  }
+}

@@ -302,7 +302,7 @@ main {
   margin: 0 auto;
 }
 
-.home {
+.personalia {
   display: grid;
   grid-template-areas:
     "home-photo"
@@ -311,7 +311,7 @@ main {
   justify-items: center;
 }
 
-.home-photo {
+.profiel-photo {
   grid-area: home-photo;
   border: 1em solid var(--background-site);
   border-radius: 50%;
@@ -322,7 +322,7 @@ main {
   box-shadow: 0 0 25px 0 var(--brown-transp);
 }
 
-.home-photo .image {
+.profiel-photo .image {
   height: auto;
   display: block;
   border-radius: 50%;
@@ -335,7 +335,7 @@ main {
   border: 0.2px solid var(--brown-transp);
 }
 
-.home-text {
+.profiel-text {
   grid-area: home-text;
   display: grid;
   color: var(--white);
@@ -343,17 +343,17 @@ main {
   justify-items: center;
 }
 
-.home-text h1 {
+.profiel-text h1 {
   font-size: 36px;
   color: var(--black);
 }
 
-.home-text h4 {
+.profiel-text h4 {
   color: var(--gray);
   font-size: 14px;
 }
 
-.home-intro {
+.profiel-intro {
   max-width: 700px;
   margin-bottom: 0.5em;
   color: var(--black);
